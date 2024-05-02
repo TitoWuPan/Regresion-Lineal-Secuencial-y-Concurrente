@@ -133,6 +133,26 @@ func Concurrente(trainingData TrainingData) time.Duration {
 	return time.Duration(end.Nanoseconds())
 }
 
+func list(TestSecuencial []time.Duration, TestConcurrente []time.Duration) {
+	sort.Slice(TestSecuencial, func(i, j int) bool {
+		return TestSecuencial[i] < TestSecuencial[j]
+	})
+
+	fmt.Println("Lista Secuencial ordenada de time.Duration:")
+	for _, duracion := range TestSecuencial {
+		fmt.Println(duracion.Microseconds())
+	}
+
+	sort.Slice(TestConcurrente, func(i, j int) bool {
+		return TestConcurrente[i] < TestConcurrente[j]
+	})
+
+	fmt.Println("Lista Concurrente ordenada de time.Duration:")
+	for _, duracion := range TestConcurrente {
+		fmt.Println(duracion.Microseconds())
+	}
+}
+
 func main() {
 	numSamples := 1000000
 	trainingData := generateTrainingData(numSamples)
@@ -153,4 +173,5 @@ func main() {
 		TestConcurrente = append(TestConcurrente, b)
 	}
 
+	list(TestSecuencial, TestConcurrente)
 }
