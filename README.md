@@ -3,9 +3,9 @@
 Trabajo Parcial - Programación Concurrente y Distribuida - Abril 2024
 
 ## Integrantes :
-- Guillén Rojas, Daniel Carlos		U201920113
-- Wu Pan, Tito Peng 			U201921200
-- Santisteban Cerna, José Mauricio	U201922760
+- Guillén Rojas, Daniel Carlos		- U201920113
+- Wu Pan, Tito Peng 			- U201921200
+- Santisteban Cerna, José Mauricio	- U201922760
 
 ## Profesor :
 Jara Garcia, Carlos Alberto
