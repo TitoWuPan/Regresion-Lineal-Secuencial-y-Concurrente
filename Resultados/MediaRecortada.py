@@ -1,7 +1,7 @@
 Secuencial = []
 Concurrente = []
 
-with open('1. SecuencialResultado.txt', 'r') as f:
+with open('Resultados/1. SecuencialResultado.txt', 'r') as f:
     for linea in f:
         valor = int(linea.strip())  
         Secuencial.append(valor)
@@ -14,7 +14,7 @@ media_recortada = sum(valores_recortados) / len(valores_recortados)
 print("Media recortada Secuencial:", media_recortada)
 
 
-with open('2. ConcurrenteResultado.txt', 'r') as f:
+with open('Resultados/2. ConcurrenteResultado.txt', 'r') as f:
     for linea in f:
         valor = int(linea.strip())  
         Concurrente.append(valor)
