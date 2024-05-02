@@ -105,10 +105,6 @@ func Secuencial(trainingData TrainingData) time.Duration {
 
 	fmt.Println("Tiempo de respuesta:", end)
 
-	// partido5 := 5.0
-	// ventasPartido5 := m*partido5 + b
-	// fmt.Println("Número de entradas vendidas para el partido número 5:", int(ventasPartido5), " \n")
-
 	return time.Duration(end.Nanoseconds())
 }
 
@@ -133,10 +129,6 @@ func Concurrente(trainingData TrainingData) time.Duration {
 	fmt.Println("Coeficiente b:", b)
 
 	fmt.Println("Tiempo de respuesta:", end)
-
-	// partido5 := 5.0
-	// ventasPartido5 := m*partido5 + b
-	// fmt.Println("Número de entradas vendidas para el partido número 5:", int(ventasPartido5), " \n")
 
 	return time.Duration(end.Nanoseconds())
 }
