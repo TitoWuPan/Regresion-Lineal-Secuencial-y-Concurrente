@@ -92,7 +92,6 @@ func main() {
 			for _, value := range row {
 				floatValue, err := strconv.ParseFloat(value, 64)
 				if err != nil {
-					fmt.Printf("Error al convertir a flotante: %v\n", err)
 					continue
 				}
 				floatRow = append(floatRow, floatValue)
@@ -109,10 +108,10 @@ func main() {
 	for i, row := range combinedData {
 		for j, value := range row {
 			if j == 1 {
-				yData[i] = value
+				yData[i] = value // distance - Variable independiente
 			}
 			if j == 2 {
-				xData[i] = value
+				xData[i] = value // speed - Variable dependiente
 			}
 		}
 	}
