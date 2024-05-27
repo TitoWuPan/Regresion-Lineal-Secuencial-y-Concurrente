@@ -106,6 +106,7 @@ func main() {
 	yData := make([]float64, len(combinedData))
 
 	for i, row := range combinedData {
+		// fmt.Println(row)
 		for j, value := range row {
 			if j == 1 {
 				yData[i] = value // distance - Variable independiente
