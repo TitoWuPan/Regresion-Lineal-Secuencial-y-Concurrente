@@ -107,8 +107,14 @@ func main() {
 	yData := make([]float64, len(combinedData))
 
 	for i, row := range combinedData {
-		xData[i] = row[2] // speed - variable denpendiente
-		yData[i] = row[1] // distance - variable indenpendiente
+		for j, value := range row {
+			if j == 1 {
+				yData[i] = value
+			}
+			if j == 2 {
+				xData[i] = value
+			}
+		}
 	}
 
 	intercept, slope := linearRegression(xData, yData)
