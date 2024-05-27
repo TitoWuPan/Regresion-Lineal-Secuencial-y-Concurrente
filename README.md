@@ -12,4 +12,6 @@ Jara Garcia, Carlos Alberto
 
 
 ## Introducción
-La regresión lineal es una herramienta fundamental en la estadística y el análisis de datos, y se utiliza en una amplia variedad de aplicaciones, como predicción de ventas, análisis de tendencias, modelado de fenómenos naturales, entre otros. En este proyecto, se ha implementado regresión lineal en el lenguaje de programación Go y se realizó tanto en un enfoque serial como en uno concurrente.
+En el contexto del transporte en Nueva York, donde los taxis amarillos desempeñan un papel vital, se plantea el desafío de predecir con precisión la duración de los viajes en función de la distancia recorrida y la velocidad promedio. Utilizando datos de la Comisión de Taxis y Limusinas de Nueva York (TLC) del año 2016, se busca desarrollar un modelo de regresión lineal. Este modelo permitirá estimar con mayor precisión los tiempos de viaje, beneficiando tanto a pasajeros como a conductores en la planificación de rutas y horarios.
+
+Enlace del Dataset: https://www.kaggle.com/datasets/yasserh/nyc-taxi-trip-duration/data 
