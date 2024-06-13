@@ -58,7 +58,7 @@ func main() {
 }
 
 func sendTrip(trip TripData) {
-	conn, err := net.Dial("tcp", "187.102.208.191:8080")
+	conn, err := net.Dial("tcp", "localhost:8080")
 	if err != nil {
 		log.Fatal(err)
 	}
