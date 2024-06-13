@@ -19,10 +19,10 @@ type TripData struct {
 var (
 	tripDataChan = make(chan TripData, 100)
 	wg           sync.WaitGroup
-	modelUpdate  = make(chan struct{})
 	beta0, beta1 float64
 	allTrips     []TripData
 	mu           sync.Mutex
+	updated      bool
 )
 
 func main() {
@@ -69,17 +69,13 @@ func processTrips() {
 	for trip := range tripDataChan {
 		mu.Lock()
 		allTrips = append(allTrips, trip)
-		mu.Unlock()
-
 		recalculateModel()
-		modelUpdate <- struct{}{}
+		updated = true
+		mu.Unlock()
 	}
 }
 
 func recalculateModel() {
-	mu.Lock()
-	defer mu.Unlock()
-
 	var (
 		n     = len(allTrips)
 		sumX  float64
@@ -130,12 +126,15 @@ func menu() {
 
 func showModel() {
 	fmt.Println("Esperando actualización del modelo...")
-	select {
-	case <-modelUpdate:
-		mu.Lock()
+	time.Sleep(1 * time.Second)
+
+	mu.Lock()
+	defer mu.Unlock()
+
+	if updated {
 		fmt.Printf("Modelo actualizado: y = %.2fx + %.2f\n", beta1, beta0)
-		mu.Unlock()
-	case <-time.After(5 * time.Second):
+		updated = false
+	} else {
 		fmt.Println("No hay nuevas actualizaciones.")
 	}
 }
