@@ -1,4 +1,4 @@
-# Regresion-Lineal-Secuencial-y-Concurrente
+# Regresion-Lineal-Concurrente
 
 Trabajo Academico 4 - Programación Concurrente y Distribuida - Junio 2024
 
