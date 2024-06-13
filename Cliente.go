@@ -16,7 +16,7 @@ type TripData struct {
 
 func main() {
 	for {
-		var distance, speed, duration float64
+		var distance, price, duration float64
 
 		fmt.Print("Ingrese la distancia: ")
 		_, err := fmt.Scanf("%f\n", &distance)
@@ -26,7 +26,7 @@ func main() {
 		}
 
 		fmt.Print("Ingrese la velocidad: ")
-		_, err = fmt.Scanf("%f\n", &speed)
+		_, err = fmt.Scanf("%f\n", &price)
 		if err != nil {
 			fmt.Println("Error de entrada. Intente de nuevo.")
 			continue
@@ -41,7 +41,7 @@ func main() {
 
 		trip := TripData{
 			Distance: distance,
-			Speed:    speed,
+			Price:    price,
 			Duration: duration,
 		}
 
@@ -58,7 +58,7 @@ func main() {
 }
 
 func sendTrip(trip TripData) {
-	conn, err := net.Dial("tcp", "localhost:8080")
+	conn, err := net.Dial("tcp", "187.102.208.191:8080")
 	if err != nil {
 		log.Fatal(err)
 	}
