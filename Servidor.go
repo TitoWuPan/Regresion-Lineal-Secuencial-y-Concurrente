@@ -12,7 +12,7 @@ import (
 
 type TripData struct {
 	Distance float64 `json:"distance"`
-	Speed    float64 `json:"speed"`
+	Price    float64 `json:"Price"`
 	Duration float64 `json:"duration"`
 }
 
@@ -28,7 +28,6 @@ var (
 func main() {
 	go startServer()
 	go processTrips()
-
 	menu()
 }
 
@@ -86,7 +85,7 @@ func recalculateModel() {
 
 	for _, trip := range allTrips {
 		x := trip.Distance
-		y := trip.Speed
+		y := trip.Distance / (trip.Duration / 3600)
 		sumX += x
 		sumY += y
 		sumX2 += x * x
