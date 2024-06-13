@@ -1,6 +1,6 @@
 # Regresion-Lineal-Secuencial-y-Concurrente
 
-Trabajo Academico 3 - Programación Concurrente y Distribuida - Abril 2024
+Trabajo Academico 3 - Programación Concurrente y Distribuida - Mayo 2024
 
 ## Integrantes :
 - Guillén Rojas, Daniel Carlos		- U201920113
