@@ -28,6 +28,8 @@ var (
 func main() {
 	go startServer()
 	go processTrips()
+
+	fmt.Printf("Modelo: y = %.2fx + %.2f\n", beta1, beta0)
 	menu()
 }
 
@@ -131,7 +133,7 @@ func showModel() {
 	defer mu.Unlock()
 
 	if updated {
-		fmt.Printf("Modelo actualizado: y = %.2fx + %.2f\n", beta1, beta0)
+		fmt.Printf("Modelo: y = %.2fx + %.2f\n", beta1, beta0)
 		updated = false
 	} else {
 		fmt.Println("No hay nuevas actualizaciones.")

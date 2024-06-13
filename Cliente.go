@@ -25,7 +25,7 @@ func main() {
 			continue
 		}
 
-		fmt.Print("Ingrese la velocidad: ")
+		fmt.Print("Ingrese el precio: ")
 		_, err = fmt.Scanf("%f\n", &price)
 		if err != nil {
 			fmt.Println("Error de entrada. Intente de nuevo.")
@@ -58,7 +58,7 @@ func main() {
 }
 
 func sendTrip(trip TripData) {
-	conn, err := net.Dial("tcp", "187.102.208.191:8080")
+	conn, err := net.Dial("tcp", "localhost:8080")
 	if err != nil {
 		log.Fatal(err)
 	}
