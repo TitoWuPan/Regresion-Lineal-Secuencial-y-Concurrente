@@ -1,0 +1,48 @@
+<body>
+
+<div class="top-right">
+  <button class="btn btn-primary" (click)="Update()">Update</button>
+</div>
+
+<div class="model-container">
+  <div class="model-box">
+    <h2>Linear Regression Model</h2>
+    <p>Model Equation:</p>
+    <div class="equation-box">
+      <p>Speed = {{ model.beta1 | number:'1.2-2'}} (Distance) + {{ model.beta0 | number:'1.2-2'}}</p>
+    </div>
+  </div>
+  <div class="calculator-box">
+    <h3>Calculator</h3>
+    <form (ngSubmit)="calculateY()">
+      <label for="x-value">Distance value:</label>
+      <input type="number" id="x-value" [(ngModel)]="xValue"  name="xValue" required>
+      <button type="submit">Calculate</button>
+    </form>
+    <ng-container *ngIf="calculatedY !== null">
+      <div class="result-box">
+        <p>Speed: {{ calculatedY | number:'1.2-2' }}</p>
+      </div>
+    </ng-container>
+  </div>
+  <div class="model-box">
+    <table class="trip-table">
+      <thead>
+        <tr>
+          <th>Distance</th>
+          <th>Speed</th>
+          <th>Duration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let trip of trips.slice(-10)">
+          <td>{{ trip.distance | number:'1.2-2' }} km</td>
+          <td>{{ trip.speed | number:'1.2-2' }} km * Hour</td>
+          <td>{{ trip.duration }} Hour</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</body>

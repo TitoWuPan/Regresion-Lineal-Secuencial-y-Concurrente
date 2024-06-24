@@ -1,0 +1,101 @@
+body {
+  background-image: url('BackGround.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.top-right {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+.model-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  color: #333;
+}
+
+.model-box,
+.calculator-box {
+  width: 80%;
+  max-width: 600px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+h2, h3 {
+  text-align: center;
+  color: #333;
+}
+
+.equation-box, .result-box {
+  background-color: rgba(240, 248, 255, 0.9);
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type="number"] {
+  padding: 5px;
+  width: 100px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.trip-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.trip-table th, .trip-table td {
+  padding: 8px;
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
